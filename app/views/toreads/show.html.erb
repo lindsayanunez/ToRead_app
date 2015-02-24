@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @toread.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @toread.description %>
+</p>
+
+<p>
+  <strong>Read:</strong>
+  <%= @toread.read %>
+</p>
+
+<%= link_to 'Edit', edit_toread_path(@toread) %> |
+<%= link_to 'Back', toreads_path %>

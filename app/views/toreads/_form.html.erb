@@ -1,0 +1,29 @@
+<%= form_for(@toread) do |f| %>
+  <% if @toread.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@toread.errors.count, "error") %> prohibited this toread from being saved:</h2>
+
+      <ul>
+      <% @toread.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :read %><br>
+    <%= f.check_box :read %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
